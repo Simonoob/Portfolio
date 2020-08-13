@@ -1,12 +1,7 @@
 import React, { useRef } from "react";
 import "../scss/App.scss";
 import { Canvas, useFrame } from "react-three-fiber";
-import {
-  softShadows,
-  MeshDistortMaterial,
-  MeshWobbleMaterial,
-  OrbitControls,
-} from "drei";
+import { softShadows, MeshWobbleMaterial, OrbitControls } from "drei";
 
 import { a } from "react-spring/three";
 
@@ -24,10 +19,6 @@ const SpinMesh = ({ position, color, args, speed }) => {
         attach="material"
         color={color}
         speed={speed}
-        // clearcoat={1}
-        // clearcoatRoughness={1}
-        // radius={1}
-        // metalness={1}
         factor={0.5}
       />
     </a.mesh>
@@ -51,12 +42,7 @@ function Background() {
           color="white"
           speed={0.4}
         />
-        {/* <SpinMesh
-          position={[0, 0, 0]}
-          args={[10, 10]}
-          color="white"
-          speed={0.3}
-        /> */}
+
         <OrbitControls />
       </Canvas>
     </div>

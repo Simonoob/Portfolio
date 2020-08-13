@@ -2,16 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const pageTransitionVariants = {
-  in: {
-    // transition: {
-    //   staggerChildren: 0.2,
-    // },
-  },
-  out: {
-    // transition: {
-    //   staggerChildren: 0.5,
-    // },
-  },
+  in: {},
+  out: {},
 };
 
 const liTransition = {

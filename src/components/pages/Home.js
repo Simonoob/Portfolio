@@ -62,21 +62,13 @@ const Home = () => {
       delay: 0.5,
       ease: Power2.easeOut,
     });
-    tl
-      // .from(videoItem, {
-      //   scale: 3,
-      //   duration: 1.4,
-      //   delay: -1.6,
-      //   ease: Power2.easeInOut,
-      // })
-      .to([headerAfter, link1After, link2After], {
-        width: "0%",
-        ease: Power2.easeInOut,
-        duration: 1.4,
+    tl.to([headerAfter, link1After, link2After], {
+      width: "0%",
+      ease: Power2.easeInOut,
+      duration: 1.4,
 
-        stagger: 0.3,
-      })
-      .to([link1After, link2After], { opacity: 0.5 });
+      stagger: 0.3,
+    }).to([link1After, link2After], { opacity: 0.5 });
   }, [tl, headerAfter, link1After, link2After, videoContainerAfter]);
 
   return (
@@ -86,13 +78,7 @@ const Home = () => {
         <Background />
       </div>
       <div className="home">
-        <h1
-        // ref={(el) => {
-        //   header = el;
-        // }}
-        >
-          WELCOME
-        </h1>
+        <h1>WELCOME</h1>
         <div className="link-container">
           <NavLink
             to="/projects"
@@ -109,9 +95,6 @@ const Home = () => {
           <NavLink
             to="/contact"
             className="link link2"
-            // ref={(el) => {
-            //   link2 = el;
-            // }}
             onMouseEnter={handleExpand}
             onMouseLeave={handleShrink}
             onClick={resetPage}
