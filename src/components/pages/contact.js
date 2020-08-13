@@ -8,7 +8,7 @@ const contact = () => {
       <PageTransition />
 
       <div className="form-container">
-        <form action="/thank-you" data-netlify="true">
+        <form method="POST" action="/ThankYou" data-netlify="true">
           <h2>
             Send me a message{" "}
             <span role="img" aria-label="envelope">

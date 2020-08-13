@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/thank-you" component={ThankYou} />
+            <Route exact path="/ThankYou" component={ThankYou} />
           </Switch>
         </AnimatePresence>
       </div>
