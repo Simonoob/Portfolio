@@ -1,0 +1,282 @@
+@media (max-width: 420px) {
+  body {
+    height: 100vh;
+
+    .App {
+      display: flex;
+      margin: 0;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+
+      .link {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: small;
+      }
+
+      .sidenav {
+        z-index: 5;
+        font-size: medium;
+        height: 100vh;
+        width: 33vw;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        left: -40vw;
+        border-left: none;
+        box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+
+        .block {
+          display: flex;
+          flex-direction: column;
+          padding: 0.2rem;
+        }
+      }
+
+      .hamburger {
+        pointer-events: all;
+        z-index: 2;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        height: 3.5rem;
+        width: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border: 2px solid black;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+
+        .row {
+          width: 2.5rem;
+          height: 5px;
+          background-color: black;
+          pointer-events: none;
+        }
+      }
+
+      .content {
+        width: 100%;
+        max-width: 100%;
+
+        .video {
+          height: 100vh;
+        }
+
+        .home {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: space-between;
+          width: fit-content;
+          margin: 0 auto;
+          position: relative;
+          font-size: medium;
+
+          h1 {
+            padding: 0.5rem;
+            font-size: xx-large;
+          }
+
+          .link-container {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .link1 {
+              font-size: xx-large;
+            }
+
+            .link2 {
+              font-size: xx-large;
+
+              text-align: center;
+            }
+          }
+        }
+        .projects {
+          .testimonial-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .testimonial-container {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              .arrows {
+                height: fit-content;
+                z-index: 1;
+                background-color: rgba(255, 255, 255, 0.746);
+                padding: 1rem;
+                position: absolute;
+                top: 45%;
+                &:hover {
+                  transform: scale(1);
+                }
+              }
+              .inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                margin-top: 3rem;
+
+                .t-image {
+                  width: 80%;
+                  height: 45%;
+                  position: relative;
+                  top: -3.5rem;
+
+                  ul {
+                    height: 100%;
+                    position: relative;
+                    li {
+                      position: relative;
+                      height: 100%;
+                    }
+                  }
+                  img {
+                    height: 100%;
+                  }
+                }
+                .t-content {
+                  width: 80%;
+                  height: 45%;
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  ul {
+                    position: absolute;
+                    overflow: hidden;
+                    width: 100%;
+
+                    li {
+                      width: 80%;
+                      height: fit-content;
+                      color: black;
+                      display: flex;
+                      align-items: center;
+                      position: fixed;
+                      opacity: 0;
+
+                      .content-inner {
+                        padding: 0.5rem;
+
+                        .quote {
+                          font-size: small;
+                          line-height: 20px;
+                          margin-bottom: 0.5rem;
+                        }
+                        .link {
+                          font-size: small;
+                          margin-right: 0.5rem;
+                        }
+                        .title {
+                          padding: 0.5rem;
+                          font-size: x-large;
+                          margin-bottom: 0.5rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .about {
+          height: 100vh;
+          max-height: 100vh;
+          position: relative;
+
+          div {
+            h2 {
+              font-size: large;
+            }
+
+            a {
+              font-size: medium;
+              padding: 0.2rem;
+
+              &:hover {
+                color: black;
+                background-color: white;
+              }
+            }
+          }
+        }
+        .contact {
+          height: 100vh;
+          max-height: 100vh;
+          font-size: medium;
+
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            display: none;
+          }
+
+          .form-container {
+            width: 95%;
+            height: 95%;
+            form {
+              width: 100%;
+              height: 100%;
+              h2,
+              button,
+              input,
+              textarea {
+                padding: 1rem;
+                margin: 1rem 0;
+                font-size: large;
+              }
+
+              .input-field {
+                width: 100%;
+              }
+
+              label {
+                margin-top: 0.5rem;
+                font-size: large;
+
+                input,
+                textarea {
+                  font-size: medium;
+                }
+
+                textarea {
+                  width: 100%;
+                  max-width: 100%;
+                }
+              }
+
+              &:before {
+                display: none;
+              }
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+        .thank-you {
+          h1 {
+            line-height: 2rem;
+            font-size: large;
+          }
+        }
+      }
+    }
+  }
+}
