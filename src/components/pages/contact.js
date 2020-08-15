@@ -4,10 +4,34 @@ import ThankYou from "./ThankYou";
 import PageTransition from "../PageTransition";
 
 const Form = ({ operation }) => {
+  const [state, setState] = useState({ name: "", email: "", message: "" });
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  const handleSubmit = (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...state }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
+
+  const handleChange = (e) =>
+    setState({ ...state, [e.target.name]: e.target.value });
+
   return (
     <div className="form-container">
-      <form method="post" netlify name="contact" onSubmit={operation}>
-        <input type="hidden" name="portfolio-contact" value="contact" />
+      {/* <form method="post" netlify name="contact" onSubmit={operation}>
         <h2>
           Send me a message{" "}
           <span role="img" aria-label="envelope">
@@ -41,6 +65,44 @@ const Form = ({ operation }) => {
           </label>
         </div>
         <button type="submit">Send</button>
+      </form> */}
+
+      <form onSubmit={handleSubmit}>
+        <p>
+          <label>
+            Your Name:{" "}
+            <input
+              type="text"
+              name="name"
+              value={state.name}
+              onChange={handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email:{" "}
+            <input
+              type="email"
+              name="email"
+              value={state.email}
+              onChange={handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message:{" "}
+            <textarea
+              name="message"
+              value={state.message}
+              onChange={handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
     </div>
   );
