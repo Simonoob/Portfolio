@@ -7,8 +7,8 @@ const Form = ({ operation }) => {
   return (
     <div className="form-container">
       <form
-        //  method="POST"
-
+        method="POST"
+        name="portfolio-contact"
         data-netlify="true"
         onSubmit={operation}
       >
