@@ -67,7 +67,7 @@ const Form = ({ operation }) => {
         <button type="submit">Send</button>
       </form> */}
 
-      <form onSubmit={handleSubmit}>
+      <form method="post" netlify onSubmit={handleSubmit}>
         <p>
           <label>
             Your Name:{" "}
