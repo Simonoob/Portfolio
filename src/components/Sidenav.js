@@ -21,8 +21,6 @@ const Sidenav = () => {
   const tl = new TimelineLite({ delay: 0.4 });
 
   const handleEnter = (e) => {
-    console.log(sidenav.style.left);
-
     if (sidenav.style.left === "0vw") {
       gsap.to(sidenav, { left: "-40vw" });
     }
