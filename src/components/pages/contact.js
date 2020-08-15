@@ -6,8 +6,8 @@ import PageTransition from "../PageTransition";
 const Form = ({ operation }) => {
   return (
     <div className="form-container">
-      <form method="post" name="contact" onSubmit={operation}>
-        <input type="hidden" name="form-name" value="contact" />
+      <form method="post" netlify name="contact" onSubmit={operation}>
+        <input type="hidden" name="portfolio-contact" value="contact" />
         <h2>
           Send me a message{" "}
           <span role="img" aria-label="envelope">
