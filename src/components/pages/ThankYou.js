@@ -1,10 +1,7 @@
 import React from "react";
-import PageTransition from "../PageTransition";
-
 const ThankYou = () => {
   return (
     <div className="thank-you">
-      <PageTransition />
       <h1>
         <span>
           Thanks for reaching out!{" "}

@@ -6,7 +6,6 @@ import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import About from "./components/pages/About";
 import Contact from "./components/pages/contact";
-import ThankYou from "./components/pages/ThankYou";
 
 import { gsap } from "gsap";
 import { AnimatePresence } from "framer-motion";
@@ -31,7 +30,6 @@ function App() {
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/ThankYou" component={ThankYou} />
           </Switch>
         </AnimatePresence>
       </div>

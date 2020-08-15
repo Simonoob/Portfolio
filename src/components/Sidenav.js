@@ -4,8 +4,6 @@ import { gsap, Power2, TimelineLite } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import Hamburger from "./Hamburger";
 
-import Resume from "../assets/Resume.pdf";
-
 gsap.registerPlugin(CSSRulePlugin);
 
 const Sidenav = () => {
@@ -103,8 +101,9 @@ const Sidenav = () => {
             Contact
           </NavLink>
           <a
-            href={Resume}
-            download="Simone Fiorentini Resume"
+            href="https://drive.google.com/file/d/1zDsP33kRxTbP4pkUsjrCWySOh26I22Br/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="link link4"
             ref={(el) => (link4 = el)}
             onMouseEnter={handleEnter}

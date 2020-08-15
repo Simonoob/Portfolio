@@ -58,8 +58,8 @@ const Home = () => {
   useEffect(() => {
     gsap.to(videoContainerAfter, {
       width: "0%",
-      duration: 6,
-      delay: 0.5,
+      duration: 3,
+      delay: 1,
       ease: Power2.easeOut,
     });
     tl.to([headerAfter, link1After, link2After], {

@@ -1,56 +1,71 @@
-import React from "react";
+import React, { useState } from "react";
+import ThankYou from "./ThankYou";
 
 import PageTransition from "../PageTransition";
 
-const contact = () => {
+const Form = ({ operation }) => {
   return (
-    <div className="contact">
-      <PageTransition />
+    <div className="form-container">
+      <form
+        //  method="POST"
 
-      <div className="form-container">
-        <form method="POST" action="/ThankYou" data-netlify="true">
-          <h2>
-            Send me a message{" "}
-            <span role="img" aria-label="envelope">
-              📡
-            </span>
-          </h2>
-          <div className="input-field">
-            <label>
-              Name:
-              <input type="text" name="name" id="name" required />
-            </label>
-          </div>
+        data-netlify="true"
+        onSubmit={operation}
+      >
+        <h2>
+          Send me a message{" "}
+          <span role="img" aria-label="envelope">
+            📡
+          </span>
+        </h2>
+        <div className="input-field">
+          <label>
+            Name:
+            <input type="text" name="name" id="name" required />
+          </label>
+        </div>
 
-          <div className="input-field">
-            <label>
-              Email:
-              <input type="email" name="email" id="email" required />
-            </label>
-          </div>
+        <div className="input-field">
+          <label>
+            Email:
+            <input type="email" name="email" id="email" required />
+          </label>
+        </div>
 
-          <div className="input-field ">
-            <label>
-              Message:
-              <textarea
-                data-autoresize
-                type="text"
-                name="message"
-                id="textarea"
-                required
-              ></textarea>
-            </label>
-          </div>
-          <button
-            type="submit"
-            className="btn btn-large waves-effect waves-light center-align tilt"
-          >
-            Send
-          </button>
-        </form>
-      </div>
+        <div className="input-field ">
+          <label>
+            Message:
+            <textarea
+              data-autoresize
+              type="text"
+              name="message"
+              id="textarea"
+              required
+            ></textarea>
+          </label>
+        </div>
+        <button
+          type="submit"
+          className="btn btn-large waves-effect waves-light center-align tilt"
+        >
+          Send
+        </button>
+      </form>
     </div>
   );
 };
 
-export default contact;
+const Contact = () => {
+  const [sent, setSent] = useState(false);
+
+  const changeState = () => setSent(!sent);
+
+  return (
+    <div className="contact">
+      <PageTransition />
+      {sent ? <ThankYou /> : <Form operation={changeState} />}
+    </div>
+  );
+};
+
+export default Contact;
