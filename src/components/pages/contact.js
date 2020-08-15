@@ -6,12 +6,8 @@ import PageTransition from "../PageTransition";
 const Form = ({ operation }) => {
   return (
     <div className="form-container">
-      <form
-        method="POST"
-        name="portfolio-contact"
-        data-netlify="true"
-        onSubmit={operation}
-      >
+      <form method="post" name="contact" onSubmit={operation}>
+        <input type="hidden" name="form-name" value="contact" />
         <h2>
           Send me a message{" "}
           <span role="img" aria-label="envelope">
@@ -44,12 +40,7 @@ const Form = ({ operation }) => {
             ></textarea>
           </label>
         </div>
-        <button
-          type="submit"
-          className="btn btn-large waves-effect waves-light center-align tilt"
-        >
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
     </div>
   );
