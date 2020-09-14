@@ -34,11 +34,11 @@ const Home = () => {
 
   const handleExpand = (e) => {
     if (e.target === link1) {
-      gsap.to(link2After, { width: "100%" });
-      gsap.to(link1Before, { width: "100%" });
+      gsap.to(link2After, { width: "101%" });
+      gsap.to(link1Before, { width: "101%" });
     } else {
-      gsap.to(link1After, { width: "100%" });
-      gsap.to(link2Before, { width: "100%" });
+      gsap.to(link1After, { width: "101%" });
+      gsap.to(link2Before, { width: "101%" });
     }
   };
 
