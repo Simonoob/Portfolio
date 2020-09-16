@@ -66,11 +66,7 @@ const Sidenav = () => {
           </NavLink>
         </h1>
 
-        <div
-          style={{
-            padding: ".5rem",
-          }}
-        >
+        <div>
           <NavLink
             className="link link1"
             to="/projects"
@@ -108,21 +104,6 @@ const Sidenav = () => {
             onMouseLeave={handleLeave}
           >
             Resume
-            <span
-              role="img"
-              style={{ opacity: 0, pointerEvents: "none" }}
-              aria-label="download"
-            >
-              📥
-            </span>
-            <span
-              className="emoji"
-              role="img"
-              style={{ transform: "rotate(90deg)" }}
-              aria-label="download"
-            >
-              📥
-            </span>
           </a>
         </div>
 

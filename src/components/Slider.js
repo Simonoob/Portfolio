@@ -39,7 +39,10 @@ const testimonials = [
 const Slider = () => {
   let imageList = useRef(null);
   let testimonialList = useRef(null);
-  const imageWidth = 340;
+  const imageWidth =
+    "420px" < window.innerWidth < "1080px" && window.innerHeight < "950px"
+      ? 240
+      : 340;
 
   const [state, setState] = useState({
     isActive1: true,

@@ -13,10 +13,11 @@ body {
   }
 
   .App {
+    z-index: 0;
     display: grid;
-    margin: 5vh;
-    height: 90vh;
-    grid-template-columns: 20% 70% 10%;
+    padding: 5vh;
+    height: 100vh;
+    grid-template-columns: 25% 65% 10%;
     justify-content: center;
     visibility: hidden;
 
@@ -26,10 +27,9 @@ body {
     }
 
     .link {
-      padding: 0.5rem;
-      margin: 0.5rem;
       color: black;
       font-size: 1.8rem;
+      padding: 0.7rem;
     }
 
     .hamburger {
@@ -41,7 +41,7 @@ body {
       transform: rotate(180deg);
       font-size: xx-large;
       height: 90vh;
-      width: 10vw;
+      width: 12.5vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -51,10 +51,11 @@ body {
       font-weight: bold;
       writing-mode: vertical-rl;
       background-color: white;
+      z-index: 5;
       .block {
         display: flex;
         flex-direction: column;
-        padding: 0.5rem;
+        padding: 1.5rem;
         color: white;
         background-color: black;
       }
@@ -145,7 +146,6 @@ body {
       .overlay {
         position: absolute;
         display: flex;
-        z-index: 10;
         height: 100vh;
         width: 100%;
         bottom: 0;
@@ -164,7 +164,6 @@ body {
       }
 
       .video {
-        z-index: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -176,8 +175,6 @@ body {
           outline: none;
           border: none;
         }
-
-        overflow: hidden;
 
         &:after {
           content: "";
@@ -195,7 +192,15 @@ body {
           object-fit: cover;
           pointer-events: all;
           outline: none;
-          overflow: hidden;
+
+          .mouse-tracker {
+            position: fixed;
+            bottom: -5vh;
+            right: -15vw;
+            z-index: 1;
+            width: 150vw;
+            height: 150vh;
+          }
         }
       }
 
@@ -211,7 +216,7 @@ body {
         pointer-events: none;
 
         h1 {
-          padding: 0.5rem;
+          padding: 3rem;
           font-size: 10rem;
           line-height: 0.85;
           width: fit-content;
@@ -238,6 +243,9 @@ body {
 
           .link1 {
             margin: 2rem 0;
+            height: fit-content;
+            font-size: 3rem;
+            padding: 1.5rem;
             font-size: 3rem;
             color: black;
             border: 5px solid black;
@@ -270,6 +278,8 @@ body {
 
           .link2 {
             margin: 2rem 0;
+            height: fit-content;
+            padding: 1.5rem;
             font-size: 3rem;
             color: black;
             border: 5px solid black;
@@ -725,3 +735,4 @@ body {
 }
 
 @import "mobile";
+@import "fullhd";

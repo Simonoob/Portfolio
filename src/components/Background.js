@@ -1,16 +1,29 @@
 import React, { useRef } from "react";
 import "../scss/App.scss";
 import { Canvas, useFrame } from "react-three-fiber";
-import { softShadows, MeshWobbleMaterial, OrbitControls } from "drei";
+import { softShadows, MeshWobbleMaterial } from "drei";
 
 import { a } from "react-spring/three";
 
 softShadows();
 
-const SpinMesh = ({ position, color, args, speed }) => {
+const SpinMesh = ({ position, color, args, speed, Mouse }) => {
   const mesh = useRef(null);
 
-  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.006));
+  let cursorY = 0;
+  let cursorX = 0;
+
+  useFrame(() => {
+    if (
+      localStorage.getItem("cursorY") !== cursorY ||
+      localStorage.getItem("cursorX") !== cursorX
+    ) {
+      cursorY = localStorage.getItem("cursorY");
+      cursorX = localStorage.getItem("cursorX");
+      mesh.current.rotation.x = cursorY / 2000 + cursorX / 2000;
+      mesh.current.rotation.y = cursorY / 2000 - cursorX / 2000;
+    }
+  });
 
   return (
     <a.mesh castShadow position={position} ref={mesh}>
@@ -25,7 +38,7 @@ const SpinMesh = ({ position, color, args, speed }) => {
   );
 };
 
-function Background() {
+function Background({ Mouse }) {
   return (
     <div className="bg">
       <Canvas colorManagement camera={{ position: [-5, 2, 10] }} shadowMap>
@@ -33,17 +46,13 @@ function Background() {
         <pointLight position={[0, -10, 0]} intensity={1.5} />
         <pointLight position={[0, 100, 0]} intensity={1.5} />
 
-        {/* <pointLight position={[0, 0, 30]} intensity={1.5} /> */}
-        {/* <pointLight position={[-30, 0, 30]} intensity={1.5} /> */}
-
         <SpinMesh
           position={[0, 0, 0]}
           args={[8, 8, 8]}
           color="white"
           speed={0.4}
+          Mouse={Mouse}
         />
-
-        <OrbitControls />
       </Canvas>
     </div>
   );

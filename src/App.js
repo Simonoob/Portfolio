@@ -19,14 +19,24 @@ function App() {
     gsap.to(app, { css: { visibility: "visible" }, duration: 1 });
   }, []);
 
+  let Mouse = { x: 0, y: 0 };
+
+  const _onMouseMove = (e) => {
+    Mouse = { x: e.screenX, y: e.screenY };
+    localStorage.setItem("cursorX", Mouse.x);
+    localStorage.setItem("cursorY", Mouse.y);
+  };
+
   return (
-    <div className="App" ref={(el) => (app = el)}>
+    <div className="App" ref={(el) => (app = el)} onMouseMove={_onMouseMove}>
       <Sidenav className="SideNav" />
 
       <div className="content">
         <AnimatePresence exitBeforeEnter initial={false}>
           <Switch location={location} key={location.pathname}>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/">
+              <Home Mouse={Mouse} />
+            </Route>
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />

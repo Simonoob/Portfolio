@@ -7,7 +7,7 @@ import PageTransition from "../PageTransition";
 
 gsap.registerPlugin(CSSRulePlugin);
 
-const Home = () => {
+const Home = ({ Mouse }) => {
   let videoContainerAfter = CSSRulePlugin.getRule(
     "body .App .content .video:after"
   );
@@ -75,10 +75,10 @@ const Home = () => {
     <div>
       <PageTransition />
       <div className="video">
-        <Background />
+        <Background Mouse={Mouse} />
       </div>
       <div className="home">
-        <h1>WELCOME</h1>
+        <h1>Welcome</h1>
         <div className="link-container">
           <NavLink
             to="/projects"
@@ -90,7 +90,7 @@ const Home = () => {
             onMouseLeave={handleShrink}
             onClick={resetPage}
           >
-            CHECK MY WORK
+            Check my work
           </NavLink>
           <NavLink
             to="/contact"
@@ -99,7 +99,7 @@ const Home = () => {
             onMouseLeave={handleShrink}
             onClick={resetPage}
           >
-            GET IN TOUCH
+            Get in touch
           </NavLink>
         </div>
       </div>
