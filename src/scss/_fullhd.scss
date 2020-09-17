@@ -1,9 +1,9 @@
-@media (min-width: 700px) and (max-width: 2000px) and (max-height: 950px) {
+@media (min-width: 700px) and (max-width: 1500px) {
   body {
     .App {
       .link {
         margin: 0.2rem 0;
-        font-size: 1rem;
+        font-size: 0.7rem;
       }
       .sidenav {
         .name {
@@ -21,6 +21,10 @@
 
       .content {
         .home {
+          h1 {
+            font-size: 8.5rem;
+          }
+
           .link-container {
             .link1 {
               height: fit-content;
@@ -57,14 +61,14 @@
                     display: flex;
                     overflow: hidden;
                     height: auto;
-                    width: 340px;
+                    width: 240px;
                     position: relative;
                     li {
-                      height: 460px;
-                      width: 340px;
+                      height: 360px;
+                      width: 240px;
                       img {
                         height: 100%;
-                        width: 340px;
+                        width: 240px;
                         object-fit: cover;
                       }
                     }
@@ -146,7 +150,8 @@
             }
 
             a {
-              font-size: large;
+              font-size: 1rem;
+              padding: 0.8rem;
             }
           }
         }

@@ -40,9 +40,7 @@ const Slider = () => {
   let imageList = useRef(null);
   let testimonialList = useRef(null);
   const imageWidth =
-    "420px" < window.innerWidth < "1080px" && window.innerHeight < "950px"
-      ? 240
-      : 340;
+    window.innerWidth < 1500 && window.innerWidth > 420 ? 240 : 340;
 
   const [state, setState] = useState({
     isActive1: true,
@@ -95,7 +93,7 @@ const Slider = () => {
 
     tl.to(testimonialList.children, 0.1, {
       opacity: 0,
-      delay: 1,
+      delay: 0.5,
     }).to(testimonialList.children[index], duration, {
       opacity: 1,
       pointerEvents: "all",
@@ -111,7 +109,7 @@ const Slider = () => {
       scale(1, 1);
       slideLeft(2, 1);
       slideLeft(2, 0);
-      fadeOut(1);
+      fadeOut(0.3);
       fadeIn(1, 1);
     } else if (imageList.children[1].classList.contains("active")) {
       setState({ isActive2: false, isActive3: true });
@@ -121,7 +119,7 @@ const Slider = () => {
       slideLeft(2, 1, 2);
       scale(2, 1);
       //content transition
-      fadeOut(1);
+      fadeOut(0.3);
       fadeIn(2, 1);
     } else if (imageList.children[2].classList.contains("active")) {
       setState({ isActive1: true, isActive3: false });
@@ -131,7 +129,7 @@ const Slider = () => {
       slideLeft(1, 0, 0);
       scale(0, 1);
       //content transition
-      fadeOut(1);
+      fadeOut(0.3);
       fadeIn(0, 1);
     }
   };
@@ -146,7 +144,7 @@ const Slider = () => {
       slideRight(0, 1);
       slideRight(1, 1);
       //content transtion
-      fadeOut(1);
+      fadeOut(0.3);
       fadeIn(2, 1);
     } else if (imageList.children[1].classList.contains("active")) {
       setState({ isActive2: false, isActive1: true });
@@ -157,7 +155,7 @@ const Slider = () => {
       slideRight(2, 1, 2);
       scale(0, 1);
       //content transtion
-      fadeOut(1);
+      fadeOut(0.3);
       fadeIn(0, 1);
     } else if (imageList.children[2].classList.contains("active")) {
       setState({ isActive2: true, isActive3: false });
@@ -166,7 +164,7 @@ const Slider = () => {
       slideLeft(1, 1);
       scale(1, 1);
       //content transtion
-      fadeOut(1);
+      fadeOut(0.3);
       fadeIn(1, 1);
     }
   };

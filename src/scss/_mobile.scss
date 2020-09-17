@@ -6,8 +6,8 @@
       display: flex;
       margin: 0;
       height: 100vh;
-      justify-content: center;
-      align-items: center;
+
+      padding: 0vh;
 
       .link {
         padding: 0.5rem;
@@ -46,14 +46,14 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        border: 2px solid black;
-        background-color: rgba(255, 255, 255, 0.5);
         box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+        background-color: rgba(255, 255, 255, 0.8);
 
         .row {
           width: 2.5rem;
-          height: 5px;
-          background-color: black;
+          height: 8px;
+          background-color: white;
+          border: 3px solid black;
           pointer-events: none;
         }
       }
@@ -78,8 +78,8 @@
           font-size: medium;
 
           h1 {
-            padding: 0.5rem;
-            font-size: xx-large;
+            padding: 1rem;
+            font-size: 3rem;
           }
 
           .link-container {
@@ -112,8 +112,8 @@
               .arrows {
                 height: fit-content;
                 z-index: 1;
-                background-color: rgba(255, 255, 255, 0.746);
-                border: 2px solid black;
+                background-color: rgba(255, 255, 255, 0.8);
+                box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
                 padding: 1.5rem;
                 position: absolute;
                 top: 45%;

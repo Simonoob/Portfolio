@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import "./scss/App.scss";
 import Sidenav from "./components/Sidenav";
@@ -6,16 +6,20 @@ import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import About from "./components/pages/About";
 import Contact from "./components/pages/contact";
+import Loading from "./components/Loading";
 
 import { gsap } from "gsap";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const [loading, setloading] = useState(true);
+
   let app = useRef();
 
   const location = useLocation();
 
   useEffect(() => {
+    setloading(false);
     gsap.to(app, { css: { visibility: "visible" }, duration: 1 });
   }, []);
 
@@ -29,6 +33,7 @@ function App() {
 
   return (
     <div className="App" ref={(el) => (app = el)} onMouseMove={_onMouseMove}>
+      {loading && <Loading />}
       <Sidenav className="SideNav" />
 
       <div className="content">
