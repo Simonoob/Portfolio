@@ -12,14 +12,11 @@ import { gsap } from "gsap";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-  const [loading, setloading] = useState(true);
-
   let app = useRef();
 
   const location = useLocation();
 
   useEffect(() => {
-    setloading(false);
     gsap.to(app, { css: { visibility: "visible" }, duration: 1 });
   }, []);
 
@@ -33,7 +30,6 @@ function App() {
 
   return (
     <div className="App" ref={(el) => (app = el)} onMouseMove={_onMouseMove}>
-      {loading && <Loading />}
       <Sidenav className="SideNav" />
 
       <div className="content">

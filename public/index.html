@@ -7,7 +7,35 @@
     <meta name="description" content="Simone Fiorentini Web Portfolio" />
 
     <title>Simone Fiorentini</title>
+    <style>
+      .loading {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        border-top-color: rgba(0, 0, 0, 0.4);
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+        left: calc(50%);
+        top: calc(50%);
+        position: fixed;
+        z-index: 1;
+      }
+
+      @keyframes spin {
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
+
   <body>
     <form name="contact" netlify hidden>
       <input type="text" name="name" />
@@ -15,7 +43,12 @@
       <textarea name="message"></textarea>
     </form>
 
-    <div id="root"></div>
+    <div id="root">
+      <noscript> You need to enable JavaScript to run this app. </noscript>
+      <div id="app">
+        <div class="loading"></div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
