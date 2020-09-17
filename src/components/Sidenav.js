@@ -66,7 +66,7 @@ const Sidenav = () => {
           </NavLink>
         </h1>
 
-        <div>
+        <div className="link-container">
           <NavLink
             className="link link1"
             to="/projects"
@@ -94,6 +94,7 @@ const Sidenav = () => {
           >
             Contact
           </NavLink>
+
           <a
             href="https://drive.google.com/file/d/1TRTq8KBpZ6kZcWgxR0eJSRYAVTyBLSSc/view?usp=sharing"
             target="_blank"

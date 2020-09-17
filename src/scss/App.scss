@@ -28,7 +28,7 @@ body {
 
     .link {
       color: black;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       padding: 0.7rem;
     }
 
@@ -52,6 +52,7 @@ body {
       writing-mode: vertical-rl;
       background-color: white;
       z-index: 5;
+
       .block {
         display: flex;
         flex-direction: column;
@@ -118,13 +119,6 @@ body {
           height: 0%;
           background-color: black;
           z-index: -1;
-        }
-
-        .emoji {
-          position: absolute;
-          transform: rotate(90deg);
-          bottom: 5%;
-          pointer-events: none;
         }
       }
 
