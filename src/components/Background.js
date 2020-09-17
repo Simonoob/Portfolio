@@ -20,8 +20,8 @@ const SpinMesh = ({ position, color, args, speed, Mouse }) => {
     ) {
       cursorY = localStorage.getItem("cursorY");
       cursorX = localStorage.getItem("cursorX");
-      mesh.current.rotation.x = cursorY / 1200 + cursorX / 1200;
-      mesh.current.rotation.y = cursorY / 1200 - cursorX / 1200;
+      mesh.current.rotation.x = cursorY / 700 + cursorX / 700;
+      mesh.current.rotation.y = cursorY / 700 - cursorX / 700;
     }
   });
 
