@@ -27,16 +27,16 @@ const Sidenav = () => {
 
     switch (e.target) {
       case link1:
-        gsap.to(link1After, { height: "100%" });
+        gsap.to(link1After, { height: "102%", duration: 0.25 });
         break;
       case link2:
-        gsap.to(link2After, { height: "100%" });
+        gsap.to(link2After, { height: "102%", duration: 0.25 });
         break;
       case link3:
-        gsap.to(link3After, { height: "100%" });
+        gsap.to(link3After, { height: "102%", duration: 0.25 });
         break;
       case link4:
-        gsap.to(link4After, { height: "100%" });
+        gsap.to(link4After, { height: "102%", duration: 0.25 });
         break;
       default:
         break;
@@ -44,7 +44,10 @@ const Sidenav = () => {
   };
 
   const handleLeave = (e) => {
-    gsap.to([link1After, link2After, link3After, link4After], { height: "0%" });
+    gsap.to([link1After, link2After, link3After, link4After], {
+      height: "0%",
+      duration: 0.25,
+    });
   };
 
   useEffect(() => {

@@ -47,6 +47,7 @@ function Background({ Mouse }) {
     <div className="bg">
       <Canvas colorManagement camera={{ position: [-5, 2, 10] }} shadowMap>
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
+        <pointLight position={[10, -10, 20]} intensity={0.5} />
         <pointLight position={[0, -10, 0]} intensity={1.5} />
         <pointLight position={[0, 100, 0]} intensity={1.5} />
 

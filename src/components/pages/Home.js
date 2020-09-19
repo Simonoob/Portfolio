@@ -34,24 +34,23 @@ const Home = ({ Mouse }) => {
 
   const handleExpand = (e) => {
     if (e.target === link1) {
-      gsap.to(link2After, { width: "100%" });
-      gsap.to(link1Before, { width: "100%" });
+      gsap.to(link1Before, { width: "100%", duration: 0.25 });
     } else {
-      gsap.to(link1After, { width: "100%" });
-      gsap.to(link2Before, { width: "100%" });
+      gsap.to(link2Before, { width: "100%", duration: 0.25 });
     }
   };
 
   const handleShrink = (e) => {
-    gsap.to(link1After, { width: "0%" });
-    gsap.to(link1Before, { width: "0%" });
-    gsap.to(link2After, { width: "0%" });
-    gsap.to(link2Before, { width: "0%" });
+    gsap.to(link1After, { width: "0%", duration: 0.25 });
+    gsap.to(link1Before, { width: "0%", duration: 0.25 });
+    gsap.to(link2After, { width: "0%", duration: 0.25 });
+    gsap.to(link2Before, { width: "0%", duration: 0.25 });
   };
 
   const resetPage = () => {
     gsap.to(link2After, { width: "0%" });
     gsap.to(link1Before, { width: "0%" });
+    gsap.to(link2Before, { width: "0%" });
     gsap.to(link1After, { width: "0%" });
   };
 
@@ -68,7 +67,7 @@ const Home = ({ Mouse }) => {
       duration: 1.4,
 
       stagger: 0.3,
-    }).to([link1After, link2After], { opacity: 0.5 });
+    });
   }, [tl, headerAfter, link1After, link2After, videoContainerAfter]);
 
   return (
@@ -98,6 +97,9 @@ const Home = ({ Mouse }) => {
             onMouseEnter={handleExpand}
             onMouseLeave={handleShrink}
             onClick={resetPage}
+            // ref={(el) => {
+            //   link2 = el;
+            // }}
           >
             Get in touch
           </NavLink>
