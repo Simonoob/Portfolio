@@ -38,16 +38,15 @@
         pointer-events: all;
         z-index: 2;
         position: fixed;
-        right: 10px;
-        top: 10px;
-        height: 3.5rem;
+        right: 9px;
+        top: 16px;
+        height: 3.7rem;
         width: 3.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: white;
 
         .row {
           width: 2.5rem;

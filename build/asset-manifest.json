@@ -1,30 +1,18 @@
 {
-  "files": {
-    "main.css": "/static/css/main.7a947ee7.chunk.css",
-    "main.js": "/static/js/main.fe2cdebd.chunk.js",
-    "main.js.map": "/static/js/main.fe2cdebd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.23cd9947.js",
-    "runtime-main.js.map": "/static/js/runtime-main.23cd9947.js.map",
-    "static/css/2.f87e9f44.chunk.css": "/static/css/2.f87e9f44.chunk.css",
-    "static/js/2.1e57fd1d.chunk.js": "/static/js/2.1e57fd1d.chunk.js",
-    "static/js/2.1e57fd1d.chunk.js.map": "/static/js/2.1e57fd1d.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.144b6fb950e095bbe6a54fde27c243c9.js": "/precache-manifest.144b6fb950e095bbe6a54fde27c243c9.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.f87e9f44.chunk.css.map": "/static/css/2.f87e9f44.chunk.css.map",
-    "static/css/main.7a947ee7.chunk.css.map": "/static/css/main.7a947ee7.chunk.css.map",
-    "static/js/2.1e57fd1d.chunk.js.LICENSE.txt": "/static/js/2.1e57fd1d.chunk.js.LICENSE.txt",
-    "static/media/arrow-left.svg": "/static/media/arrow-left.4cd3b2b4.svg",
-    "static/media/arrow-right.svg": "/static/media/arrow-right.116a70ad.svg",
-    "static/media/book-library.PNG": "/static/media/book-library.2a5b7c10.PNG",
-    "static/media/job.finder.PNG": "/static/media/job.finder.0f3ab4d8.PNG",
-    "static/media/phonebook.PNG": "/static/media/phonebook.5c6a75f2.PNG"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.23cd9947.js",
-    "static/css/2.f87e9f44.chunk.css",
-    "static/js/2.1e57fd1d.chunk.js",
-    "static/css/main.7a947ee7.chunk.css",
-    "static/js/main.fe2cdebd.chunk.js"
-  ]
+  "main.css": "/static/css/main.e4ca08f4.chunk.css",
+  "main.js": "/static/js/main.5e3e33cc.chunk.js",
+  "main.js.map": "/static/js/main.5e3e33cc.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.6c46ddd0.chunk.js": "/static/js/2.6c46ddd0.chunk.js",
+  "static/js/2.6c46ddd0.chunk.js.map": "/static/js/2.6c46ddd0.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.06575b8623bc2a5a6560905ebb2cd3d4.js": "/precache-manifest.06575b8623bc2a5a6560905ebb2cd3d4.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.e4ca08f4.chunk.css.map": "/static/css/main.e4ca08f4.chunk.css.map",
+  "static/media/arrow-left.svg": "/static/media/arrow-left.4cd3b2b4.svg",
+  "static/media/arrow-right.svg": "/static/media/arrow-right.116a70ad.svg",
+  "static/media/book-library.PNG": "/static/media/book-library.2a5b7c10.PNG",
+  "static/media/job.finder.PNG": "/static/media/job.finder.0f3ab4d8.PNG",
+  "static/media/phonebook.PNG": "/static/media/phonebook.5c6a75f2.PNG"
 }

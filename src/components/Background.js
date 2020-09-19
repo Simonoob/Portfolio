@@ -14,14 +14,18 @@ const SpinMesh = ({ position, color, args, speed, Mouse }) => {
   let cursorX = 0;
 
   useFrame(() => {
-    if (
-      localStorage.getItem("cursorY") !== cursorY ||
-      localStorage.getItem("cursorX") !== cursorX
-    ) {
-      cursorY = localStorage.getItem("cursorY");
-      cursorX = localStorage.getItem("cursorX");
-      mesh.current.rotation.x = cursorY / 700 + cursorX / 700;
-      mesh.current.rotation.y = cursorY / 700 - cursorX / 700;
+    if (window.innerWidth < 500) {
+      mesh.current.rotation.x = mesh.current.rotation.y += 0.006;
+    } else {
+      if (
+        localStorage.getItem("cursorY") !== cursorY ||
+        localStorage.getItem("cursorX") !== cursorX
+      ) {
+        cursorY = localStorage.getItem("cursorY");
+        cursorX = localStorage.getItem("cursorX");
+        mesh.current.rotation.x = cursorY / 700 + cursorX / 700;
+        mesh.current.rotation.y = cursorY / 700 - cursorX / 700;
+      }
     }
   });
 
