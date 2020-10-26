@@ -8,22 +8,27 @@ const Project = ({ project }) => {
       <h2 className="title">{project.title}</h2>
       <p className="quote">{project.quote}</p>
       <div className="links">
-        <a
+      {  project.linkCode && 
+          <a
           href={project.linkCode}
           target="_blank"
           rel="noopener noreferrer"
           className="link"
         >
           Code
-        </a>
-        <a
-          href={project.linkLive}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link"
-        >
-          See it live
-        </a>
+        </a>}
+        
+        {project.linkLive &&
+ <a
+ href={project.linkLive}
+ target="_blank"
+ rel="noopener noreferrer"
+ className="link"
+>
+ See it live
+</a>}
+        
+       
       </div>
     </div>
   );
